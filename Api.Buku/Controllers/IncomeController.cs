@@ -24,6 +24,7 @@ namespace Api.Buku.Controllers
         [HttpGet]
         public async Task<ActionResult<decimal>> Get() =>
             _bukuService.GetTotal();
+           
 
         [HttpGet("{id:length(24)}", Name = "GetIncome")]
         public async  Task< ActionResult<Income>> Get(string id)
@@ -49,7 +50,7 @@ namespace Api.Buku.Controllers
         [HttpPost]
         public async Task<ActionResult<Users>> Create(Income Income)
         {
-           Income.Id =  Guid.NewGuid().ToString();
+            Income.Id = Guid.NewGuid().ToString("N").Substring(0, 24);
            await _bukuService.Create(Income);
 
             return CreatedAtRoute("GetIncome", new { id = Income.Id.ToString() }, Income);
