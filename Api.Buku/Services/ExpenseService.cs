@@ -10,7 +10,7 @@ namespace Api.Buku.Services
     public class ExpenseService
     {
 
-        private readonly IMongoCollection<Expense> _income;
+        private readonly IMongoCollection<Expense> _Expense;
 
         public ExpenseService(IBukuDatabaseSettings settings)
         {
@@ -31,10 +31,10 @@ namespace Api.Buku.Services
 
 
         public async Task<List<Expense>> Get() =>
-          await _income.Find(Expense => true).ToListAsync();
+          await _Expense.Find(Expense => true).ToListAsync();
 
         public decimal GetToTal() {
-         return  _income.Find(Income => true).ToList().Sum(x => x.Amount);
+         return  _Expense.Find(Expense => true).ToList().Sum(x => x.Amount);
         }
           
 
@@ -43,7 +43,7 @@ namespace Api.Buku.Services
 
         public async Task<Expense> Create(Expense Expense)
         {
-            await _income.InsertOneAsync(Expense);
+            await _Expense.InsertOneAsync(Expense);
             return Expense;
         }
 
@@ -76,13 +76,13 @@ namespace Api.Buku.Services
         //}
 
         public async void Update(string id, Expense Income) =>
-           await  _income.ReplaceOneAsync(Income => Income.Id == id, Income);
+           await  _Expense.ReplaceOneAsync(Income => Income.Id == id, Income);
 
         public async void Remove(Income Income) =>
-           await _income.DeleteOneAsync(Income => Income.Id == Income.Id);
+           await _Expense.DeleteOneAsync(Income => Income.Id == Income.Id);
 
         public async void Remove(string id) =>
-           await _income.DeleteOneAsync(Income => Income.Id == id);
+           await _Expense.DeleteOneAsync(Income => Income.Id == id);
     }
 }
 
