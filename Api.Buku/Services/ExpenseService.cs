@@ -20,7 +20,7 @@ namespace Api.Buku.Services
                 .FromConnectionString(settings.ConnectionString);
             var client = new MongoClient(settings_);
             var database = client.GetDatabase(settings.DatabaseName);
-            _income = database.GetCollection<Expense>(settings.BukuCollectionName);
+            _Expense = database.GetCollection<Expense>(settings.BukuCollectionName);
 
 
             //var client = new MongoClient(settings.ConnectionString);
