@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dOg+C1bJukdpfKYnx/G/5VPAjff0lK9pGAe/T34D9/gxYI+h0rQ4rB0nlNjaBkdmUjfZhA0817nFGaX/owkfCg==",
+  "dgSpecHash": "ANk1NkB6auFbyhamiHq6zSRErJsydbuI5EOVTm+cxqxejoy38Kew0Lqlc9LqbL0LYcEhtudUdyhs8e10biigug==",
   "success": true,
-  "projectFilePath": "C:\\Development\\Web.OGodApp\\Api.Buku\\Api.Buku.csproj",
+  "projectFilePath": "C:\\Users\\amoah\\Source\\Repos\\myapplication1\\My_app_api\\Api.Buku\\Api.Buku.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amoah\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\amoah\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
@@ -19,8 +19,7 @@
     "C:\\Users\\amoah\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
     "C:\\Users\\amoah\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\amoah\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
-    "C:\\Users\\amoah\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
-    "C:\\Users\\amoah\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+    "C:\\Users\\amoah\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512"
   ],
   "logs": []
 }
