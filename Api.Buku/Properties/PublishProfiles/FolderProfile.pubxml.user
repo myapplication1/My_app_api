@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\amoah\source\repos\Api.Buku\Api.Buku\bin\Release\net5.0\publish\</_PublishTargetUrl>
+    <History>True|2021-08-04T13:37:56.4609257Z;True|2021-08-04T01:27:42.2443997-04:00;True|2021-08-04T00:38:06.8456179-04:00;True|2021-08-04T00:37:26.7316988-04:00;True|2021-08-04T00:14:50.6950192-04:00;</History>
+  </PropertyGroup>
+</Project>
