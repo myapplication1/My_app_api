@@ -39,7 +39,7 @@ namespace Api.Buku.Services
           
 
         public async Task<Expense> Get(string id) =>
-           await _income.Find<Expense>(users => users.Id == id).FirstOrDefaultAsync();
+           await _Expense.Find<Expense>(users => users.Id == id).FirstOrDefaultAsync();
 
         public async Task<Expense> Create(Expense Expense)
         {
