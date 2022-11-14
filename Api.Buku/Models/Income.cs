@@ -7,7 +7,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Api.Buku.Models
 {
-    public class Expense
+    public class Income
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
