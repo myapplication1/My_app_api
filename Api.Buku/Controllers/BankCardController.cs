@@ -22,8 +22,8 @@ namespace Api.Buku.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<decimal>> Get() =>
-            _bukuService.GetTotal();
+        public async Task<ActionResult<List<BankCards>>> Get() =>
+         await   _bukuService.Get();
 
         [HttpGet("{id:length(24)}", Name = "GetCards")]
         public async  Task< ActionResult<BankCards>> Get(string id)
