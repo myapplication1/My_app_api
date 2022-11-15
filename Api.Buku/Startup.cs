@@ -46,6 +46,8 @@ namespace Api.Buku
             services.AddSingleton<SeatService>();
             services.AddSingleton<IncomeService>();
             services.AddSingleton<ExpenseService>();
+            services.AddSingleton<IncomeTransService>();
+            services.AddSingleton<ExpenseTranService>();
 
         }
 

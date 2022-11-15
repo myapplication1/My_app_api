@@ -49,8 +49,8 @@ namespace Api.Buku.Controllers
         [HttpPost]
         public async Task<ActionResult<Users>> Create(Income Income)
         {
-           Income.Id =  Guid.NewGuid().ToString();
-           await _bukuService.Create(Income);
+            Income.Id = Guid.NewGuid().ToString("N").Substring(0, 24);
+            await _bukuService.Create(Income);
 
             return CreatedAtRoute("GetIncome", new { id = Income.Id.ToString() }, Income);
         }
