@@ -48,6 +48,7 @@ namespace Api.Buku
             services.AddSingleton<ExpenseService>();
             services.AddSingleton<IncomeTransService>();
             services.AddSingleton<ExpenseTranService>();
+            services.AddSingleton<BankCardService>();
 
         }
 
