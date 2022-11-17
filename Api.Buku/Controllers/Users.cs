@@ -25,10 +25,24 @@ namespace Api.Buku.Controllers
         public async Task<ActionResult<List<Users>>> Get() =>
           await  _bukuService.Get();
 
-        [HttpGet("{id:length(24)}", Name = "GetUsers")]
-        public async  Task< ActionResult<Users>> Get(string id)
+        //[HttpGet("{id:length(24)}", Name = "GetUsers")]
+        //public async  Task< ActionResult<Users>> Get(string id)
+        //{
+        //    var users =await _bukuService.Get(id);
+
+        //    if (users == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return users;
+        //}
+
+
+        [HttpGet("{email}/{password}", Name = "GetUsers")]
+        public async Task<ActionResult<Users>> Get(string email , string password)
         {
-            var users =await _bukuService.Get(id);
+            var users = await _bukuService.GetLogin(email, password);
 
             if (users == null)
             {
@@ -37,6 +51,7 @@ namespace Api.Buku.Controllers
 
             return users;
         }
+
 
         [HttpPost]
         public async Task<ActionResult<Users>> Create(Users Users)

@@ -33,6 +33,10 @@ namespace Api.Buku.Services
         public async Task<List<Users>> Get() =>
           await _users.Find(Users => true).ToListAsync();
 
+        public async Task<Users> GetLogin(string email , string pass) =>
+         await _users.Find(Users => Users.EmailAddress.Equals(email)&&Users.Password.Equals(pass)).FirstOrDefaultAsync();
+
+
         public async Task<Users> Get(string id) =>
            await _users.Find<Users>(users => users.Id == id).FirstOrDefaultAsync();
 

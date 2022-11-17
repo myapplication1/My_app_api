@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amoah\\Source\\Repos\\myapplication1\\My_app_api\\Api.Buku\\Api.Buku.csproj": {}
+    "C:\\Users\\amoah\\source\\repos\\myapplication1\\My_app_api\\Api.Buku\\Api.Buku.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amoah\\Source\\Repos\\myapplication1\\My_app_api\\Api.Buku\\Api.Buku.csproj": {
+    "C:\\Users\\amoah\\source\\repos\\myapplication1\\My_app_api\\Api.Buku\\Api.Buku.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amoah\\Source\\Repos\\myapplication1\\My_app_api\\Api.Buku\\Api.Buku.csproj",
+        "projectUniqueName": "C:\\Users\\amoah\\source\\repos\\myapplication1\\My_app_api\\Api.Buku\\Api.Buku.csproj",
         "projectName": "Api.Buku",
-        "projectPath": "C:\\Users\\amoah\\Source\\Repos\\myapplication1\\My_app_api\\Api.Buku\\Api.Buku.csproj",
+        "projectPath": "C:\\Users\\amoah\\source\\repos\\myapplication1\\My_app_api\\Api.Buku\\Api.Buku.csproj",
         "packagesPath": "C:\\Users\\amoah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amoah\\Source\\Repos\\myapplication1\\My_app_api\\Api.Buku\\obj\\",
+        "outputPath": "C:\\Users\\amoah\\source\\repos\\myapplication1\\My_app_api\\Api.Buku\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
