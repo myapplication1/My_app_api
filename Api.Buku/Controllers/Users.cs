@@ -59,7 +59,7 @@ namespace Api.Buku.Controllers
             Users.Id = Guid.NewGuid().ToString("N").Substring(0, 24);
             await _bukuService.Create(Users);
 
-            return CreatedAtRoute("GetUsers", new { id = Users.Id.ToString() }, Users);
+            return CreatedAtRoute("",  Users);
         }
 
 

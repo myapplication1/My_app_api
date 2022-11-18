@@ -3,8 +3,9 @@
     "",
     "\\Api.Buku",
     "\\Api.Buku\\Controllers",
-    "\\Api.Buku\\Models"
+    "\\Api.Buku\\Models",
+    "\\Api.Buku\\Services"
   ],
-  "SelectedNode": "\\Api.Buku\\Models\\Users.cs",
+  "SelectedNode": "\\Api.Buku\\Controllers\\Users.cs",
   "PreviewInSolutionExplorer": false
 }
