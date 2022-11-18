@@ -21,8 +21,8 @@ namespace Api.Buku.Models
         public string PhotoUrl { get; set; }
         public string Password { get; set; }
 
-        public events events { get; set; }
-        public List<guests> guests { get; set; }
+       // public events events { get; set; }
+       // public List<guests> guests { get; set; }
     }
     public class UsersDTO
     {

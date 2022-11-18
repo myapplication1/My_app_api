@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Api.Buku",
+    "\\Api.Buku\\Controllers",
+    "\\Api.Buku\\Models"
   ],
-  "SelectedNode": "\\Api.Buku.sln",
+  "SelectedNode": "\\Api.Buku\\Models\\Users.cs",
   "PreviewInSolutionExplorer": false
 }
