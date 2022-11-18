@@ -72,54 +72,54 @@ namespace Api.Buku.Controllers
         //}
 
 
-        [HttpPut("{id:length(24)}")]
-        public async Task<IActionResult> Update(string id, UsersDTO Users)
-        {
+        //[HttpPut("{id:length(24)}")]
+        //public async Task<IActionResult> Update(string id, UsersDTO Users)
+        //{
         
-            var users =await  _bukuService.Get(id);
-            var events = new events();
-            var guests = new guests();
-            var guestsList = new List<guests>();
+        //    var users =await  _bukuService.Get(id);
+        //    var events = new events();
+        //    var guests = new guests();
+        //    var guestsList = new List<guests>();
 
-            if (users == null)
-            {
-                return NotFound();
-            }
+        //    if (users == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            //events
+        //    //events
             
-            if(Users.events!=null)
-            {
-               // Guid obj = Guid.NewGuid();
-                users.events = events;
-                users.events.Id = Guid.NewGuid().ToString();
-                users.events.eventName = Users.events.eventName;
-                users.events.Address = Users.events.Address;
-                users. events.desp = Users.events.desp;
-                users. events.city = Users.events.city;
-                users. events.town = Users.events.town;
-            }
+        //    if(Users.events!=null)
+        //    {
+        //       // Guid obj = Guid.NewGuid();
+        //        users.events = events;
+        //        users.events.Id = Guid.NewGuid().ToString();
+        //        users.events.eventName = Users.events.eventName;
+        //        users.events.Address = Users.events.Address;
+        //        users. events.desp = Users.events.desp;
+        //        users. events.city = Users.events.city;
+        //        users. events.town = Users.events.town;
+        //    }
 
 
             //guests
-            if (Users.guests != null)
-            {
-            //    Guid obj = new Guid();
-                guests.Id = Guid.NewGuid().ToString(); 
-                guests.Fname = Users.guests.Fname;
-                guests.Lname = Users.guests.Lname;
-                guests.CellNumber = Users.guests.CellNumber;
-                guests.Seat = Users.guests.Seat;
-                guests.Table = Users.guests.Table;
-                users.guests.Add(guests);// = guestsList;
-               // List<guests> fff = new List<guests>(); 
+        //    if (Users.guests != null)
+        //    {
+        //    //    Guid obj = new Guid();
+        //        guests.Id = Guid.NewGuid().ToString(); 
+        //        guests.Fname = Users.guests.Fname;
+        //        guests.Lname = Users.guests.Lname;
+        //        guests.CellNumber = Users.guests.CellNumber;
+        //        guests.Seat = Users.guests.Seat;
+        //        guests.Table = Users.guests.Table;
+        //        users.guests.Add(guests);// = guestsList;
+        //       // List<guests> fff = new List<guests>(); 
                      
-                ////users.guests.AddRange(guestsList);
-            }
-            _bukuService.Update(id, users);
+        //        ////users.guests.AddRange(guestsList);
+        //    }
+        //    _bukuService.Update(id, users);
 
-            return Created("",users);
-        }
+        //    return Created("",users);
+        //}
 
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
