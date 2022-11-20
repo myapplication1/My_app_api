@@ -6,6 +6,6 @@
     "\\Api.Buku\\Models",
     "\\Api.Buku\\Services"
   ],
-  "SelectedNode": "\\Api.Buku\\Controllers\\Users.cs",
+  "SelectedNode": "\\Api.Buku\\Services\\IncomeService.cs",
   "PreviewInSolutionExplorer": false
 }

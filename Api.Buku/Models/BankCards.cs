@@ -17,7 +17,7 @@ namespace Api.Buku.Models
         public DateTime Expiry { get; set; }
         public string CardName { get; set; }
         public String img { get; set; }
-
+        public string email { get; set; }
     }
 
 }
