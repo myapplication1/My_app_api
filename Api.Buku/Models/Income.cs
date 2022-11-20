@@ -19,6 +19,7 @@ namespace Api.Buku.Models
         public string Status { get; set; }
         public string Description { get; set; }
         public string email { get; set; }
+         public string type { get; set; }
         
     }
    
