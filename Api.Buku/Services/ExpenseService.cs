@@ -36,7 +36,9 @@ namespace Api.Buku.Services
         public decimal GetToTal() {
          return  _Expense.Find(Expense => true).ToList().Sum(x => x.Amount);
         }
-          
+           public decimal GetToTalByEmail(string email) {
+         return  _Expense.Find(x => x.email==email).ToList().Sum(x => x.Amount);
+        }
 
         public async Task<Expense> Get(string id) =>
            await _Expense.Find<Expense>(users => users.Id == id).FirstOrDefaultAsync();

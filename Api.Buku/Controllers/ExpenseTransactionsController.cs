@@ -27,18 +27,18 @@ namespace Api.Buku.Controllers
             return await _bukuService.Get();
 
         }
-        //[HttpGet("{id:length(24)}", Name = "GetIncome")]
-        //public async  Task< ActionResult<Income>> Get(string id)
-        //{
-        //    var income =await _bukuService.Get(id);
+        [HttpGet("{id:length(24)}", Name = "GetExpense")]
+        public async  Task< ActionResult<Expense>> Get(string id)
+        {
+            var income =await _bukuService.Get(id);
 
-        //    if (income == null)
-        //    {
-        //        return NotFound();
-        //    }
+            if (income == null)
+            {
+                return NotFound();
+            }
 
-        //    return income;
-        //}
+            return income;
+        }
         //[HttpGet( Name = "GetTotal")]
         //public async Task<ActionResult<decimal>> GetTotal()
         //{

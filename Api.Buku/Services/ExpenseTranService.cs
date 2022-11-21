@@ -41,8 +41,8 @@ namespace Api.Buku.Services
         //}
        
         
-        //public async Task<Income> Get(string id) =>
-        //   await _income.Find<Income>(users => users.Id == id).FirstOrDefaultAsync();
+        public async Task<Expense> Get(string email) =>
+           await _income.Find<Expense>(exp => exp.email == email).FirstOrDefaultAsync();
 
         //public async Task<Income> Create(Income Income)
         //{

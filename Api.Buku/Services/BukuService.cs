@@ -37,6 +37,11 @@ namespace Api.Buku.Services
          await _users.Find(Users => Users.EmailAddress.Equals(email)&&Users.Password.Equals(pass)).FirstOrDefaultAsync();
 
 
+
+        public async Task<Users> UserExist(string email) =>
+           await _users.Find<Users>(users => users.EmailAddress == email).FirstOrDefaultAsync();
+
+
         public async Task<Users> Get(string id) =>
            await _users.Find<Users>(users => users.Id == id).FirstOrDefaultAsync();
 

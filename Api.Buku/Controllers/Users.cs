@@ -41,7 +41,10 @@ namespace Api.Buku.Controllers
 
         [HttpGet("{email}/{password}", Name = "GetUsers")]
         public async Task<ActionResult<Users>> Get(string email , string password)
+
+            //check if already registered
         {
+
             var users = await _bukuService.GetLogin(email, password);
 
             if (users == null)
@@ -56,10 +59,23 @@ namespace Api.Buku.Controllers
         [HttpPost]
         public async Task<ActionResult<Users>> Create(Users Users)
         {
-            Users.Id = Guid.NewGuid().ToString("N").Substring(0, 24);
-            await _bukuService.Create(Users);
 
-            return CreatedAtRoute("",  Users);
+             var users = await _bukuService.UserExist(Users.EmailAddress);
+
+
+            if(users != null)
+            {                 
+
+                 return  NotFoundResult("",  "Already Exist");
+            }
+            else
+            {
+                 Users.Id = Guid.NewGuid().ToString("N").Substring(0, 24);
+                 await _bukuService.Create(Users);
+
+                return CreatedAtRoute("",  Users);
+            }
+           
         }
 
 

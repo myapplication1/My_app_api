@@ -39,6 +39,12 @@ namespace Api.Buku.Services
             var  result = _income.Find(Income => true).ToList().Sum(x => x.Amount);
             return result;
         }
+
+         public decimal GetTotalByEmail(string email)
+        {
+            var  result = _income.Find(x => x.email== email).ToList().Sum(x => x.Amount);
+            return result;
+        }
        
         
         public async Task<Income> Get(string id) =>
