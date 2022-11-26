@@ -25,10 +25,10 @@ namespace Api.Buku.Controllers
         public async Task<ActionResult<List<BankCards>>> Get() =>
          await   _bukuService.Get();
 
-        [HttpGet("{id:length(24)}", Name = "GetCards")]
-        public async  Task< ActionResult<BankCards>> Get(string id)
+        [HttpGet("{email}")]
+        public async  Task< ActionResult<List<BankCards>>> Get(string email)
         {
-            var income =await _bukuService.Get(id);
+            var income =await _bukuService.GetAll(email);
 
             if (income == null)
             {

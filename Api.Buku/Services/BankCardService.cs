@@ -44,6 +44,9 @@ namespace Api.Buku.Services
         public async Task<BankCards> Get(string id) =>
            await _income.Find<BankCards>(users => users.email == id).FirstOrDefaultAsync();
 
+         public async Task<List<BankCards>> GetAll(string id) =>
+           await _income.Find(users => users.email == id).ToListAsync();
+
         public async Task<BankCards> Create(BankCards Income)
         {
             await _income.InsertOneAsync(Income);
