@@ -9,8 +9,8 @@ namespace Api.Buku.Models
 {
     public class Income
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        //[BsonId]
+        //[BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         public decimal Amount { get; set; }
         public string From { get; set; }

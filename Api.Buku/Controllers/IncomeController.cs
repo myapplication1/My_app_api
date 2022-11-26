@@ -10,7 +10,7 @@ using System.Globalization;
 namespace Api.Buku.Controllers
 {
     [Route("api/[controller]")]
-   // [EnableCors("CorsPolicy")]
+    // [EnableCors("CorsPolicy")]
     [ApiController]
     public class IncomeController : ControllerBase
     {
@@ -25,10 +25,10 @@ namespace Api.Buku.Controllers
         public async Task<ActionResult<decimal>> Get() =>
             _bukuService.GetTotal();
 
-        [HttpGet("{id:length(24)}", Name = "GetIncome")]
-        public async  Task< ActionResult<Income>> Get(string id)
+        [HttpGet("{email}")]
+        public async  Task< ActionResult<List<Income>>> GetAll(string email)
         {
-            var income =await _bukuService.Get(id);
+            var income =await _bukuService.GetAll(email);
 
             if (income == null)
             {
@@ -52,7 +52,7 @@ namespace Api.Buku.Controllers
             Income.Id = Guid.NewGuid().ToString("N").Substring(0, 24);
             await _bukuService.Create(Income);
 
-            return CreatedAtRoute("GetIncome", new { id = Income.Id.ToString() }, Income);
+            return CreatedAtRoute("", new { id = Income.Id.ToString() }, Income);
         }
 
 

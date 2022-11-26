@@ -66,7 +66,7 @@ namespace Api.Buku.Controllers
             if(users != null)
             {                 
 
-                 return  NotFoundResult("",  "Already Exist");
+                 return  NotFound();
             }
             else
             {

@@ -45,10 +45,12 @@ namespace Api.Buku.Services
             var  result = _income.Find(x => x.email== email).ToList().Sum(x => x.Amount);
             return result;
         }
-       
-        
+
         public async Task<Income> Get(string id) =>
-           await _income.Find<Income>(users => users.Id == id).FirstOrDefaultAsync();
+        await _income.Find(users => users.Id == id).FirstOrDefaultAsync();
+
+        public async Task<List<Income>> GetAll(string id) =>
+           await _income.Find(users => users.email == id).ToListAsync();
 
         public async Task<Income> Create(Income Income)
         {

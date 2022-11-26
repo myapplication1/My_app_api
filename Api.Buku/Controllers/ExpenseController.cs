@@ -25,7 +25,7 @@ namespace Api.Buku.Controllers
         public ActionResult<decimal> Get() =>
             _bukuService.GetToTal();
 
-        [HttpGet("{id:length(24)}", Name = "GetExpense")]
+        [HttpGet("{id:length(24)}", Name = "")]
         public async  Task< ActionResult<Expense>> Get(string id)
         {
             var income =await _bukuService.Get(id);
@@ -36,7 +36,7 @@ namespace Api.Buku.Controllers
             }
 
             return income;
-        } 
+        }
 
         [HttpPost]
         public async Task<ActionResult<Users>> Create(Expense Expense)
@@ -45,7 +45,7 @@ namespace Api.Buku.Controllers
             Expense.Id = Guid.NewGuid().ToString("N").Substring(0, 24);
             await _bukuService.Create(Expense);
 
-            return CreatedAtRoute("GetExpense", new { id = Expense.Id.ToString() }, Expense);
+            return CreatedAtRoute("", new { id = Expense.Id.ToString() }, Expense);
         }
 
 
