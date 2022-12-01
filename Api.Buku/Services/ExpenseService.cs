@@ -48,7 +48,9 @@ namespace Api.Buku.Services
             await _Expense.InsertOneAsync(Expense);
             return Expense;
         }
-
+        
+        public async Task<List<Expense>> GetAll(string id) =>
+           await _Expense.Find(users => users.email == id).ToListAsync();
 
         //public async Task<Users> AuthLogin(UserLogin users)
         //{
