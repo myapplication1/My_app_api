@@ -26,7 +26,7 @@ namespace Api.Buku.Controllers
             _bukuService.GetToTal();
 
         [HttpGet("{email}", Name = "")]
-        public async  Task< ActionResult<List<Expense>>> Get(string id)
+        public async  Task< ActionResult<List<Expense>>> Get(string email)
         {
             var income =await _bukuService.GetAll(id);
 
