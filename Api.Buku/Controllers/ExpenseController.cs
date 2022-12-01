@@ -28,7 +28,7 @@ namespace Api.Buku.Controllers
         [HttpGet("{email}", Name = "")]
         public async  Task< ActionResult<List<Expense>>> Get(string email)
         {
-            var income =await _bukuService.GetAll(id);
+            var income =await _bukuService.GetAll(email);
 
             if (income == null)
             {
